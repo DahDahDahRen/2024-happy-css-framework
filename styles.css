@@ -1,0 +1,189 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* -------------------------------------------------- */
+/* -                General CSS Rule                - */
+/* -------------------------------------------------- */
+body {
+  font-family: "Inter", monospace;
+  min-height: 100vh;
+
+  background-color: aliceblue;
+}
+
+footer {
+  padding: 24px 0;
+}
+
+.grid-item {
+  height: 240px;
+  background-color: rgb(0, 170, 255);
+}
+
+.ntr-background-clr-1 {
+  background-color: rgb(27, 27, 27);
+}
+
+.ntr-clr-1 {
+  color: aliceblue;
+}
+/* -------------------------------------------------- */
+/* -              Typography Design                 - */
+/* -------------------------------------------------- */
+
+.heading-1,
+.heading-2,
+.heading-3,
+.heading-4,
+.heading-5,
+.heading-6 {
+  letter-spacing: -0.25px;
+  line-height: 120%;
+}
+
+.heading-1 {
+  font-size: 48px;
+  font-weight: 600;
+}
+
+.heading-2 {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.heading-3 {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.heading-4 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.body-text {
+  /* 16px to 18px - mobile */
+  /* 18px to 21px - tablet and desktop */
+  font-size: 16px;
+  letter-spacing: -0.25px;
+  line-height: 160%;
+  font-weight: 400;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, #ff6b6b, #fbc531, #4cd137);
+  background-clip: text;
+  color: transparent;
+}
+
+/* -------------------------------------------------- */
+/* -                     Spacing                    - */
+/* -------------------------------------------------- */
+
+.p-y-1 {
+  padding: 40px 0;
+}
+
+.p-y-2 {
+  padding: 28px 0;
+}
+
+.m-b-1 {
+  margin-bottom: 40px;
+}
+
+/* -------------------------------------------------- */
+/* -                     Button                     - */
+/* -------------------------------------------------- */
+
+.btn {
+  cursor: pointer;
+  background-color: rgb(94, 161, 255);
+  color: aliceblue;
+  font-family: inherit;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: none;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.btn:active {
+  background-color: #004494;
+}
+
+.btn-secondary {
+  background-color: #e4f0fe;
+  color: #001833;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.btn-secondary:hover {
+  background-color: #979797;
+  color: #e4f0fe;
+}
+
+.btn-large {
+  padding: 16px 32px;
+}
+
+/* -------------------------------------------------- */
+/* -            Responsive Web Design               - */
+/* -------------------------------------------------- */
+
+/* Mobile */
+@media (min-width: 360px) {
+  .container {
+    /* Range from 320px to 480px */
+    width: 440px;
+    margin: 0 auto;
+  }
+
+  .grid-parent {
+    display: grid;
+    gap: 16px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .container {
+    /* Range from 600px to 960px */
+    width: 660px;
+    margin: 0 auto;
+  }
+
+  .grid-parent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    /* 2, 3, or 4 columns */
+  }
+}
+
+/* Desktop and Larger Screen */
+@media (min-width: 1200px) {
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  .grid-parent {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* 4, 3, or 2 columns */
+  }
+}
